@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Student Management System</h1>
+
+    <h2>Add Student</h2>
+    <form id="addForm" action="addStudent" method="post">
+        Name: <input id="inp1Add" type="text" name="name" required><br>
+        Email: <input id="inp2Add" type="email" name="email" required><br>
+        Course: <input id="inp3Add" type="text" name="course"><br>
+        Country: <input id="inp4Add" type="text" name="country"><br>
+        <input type="submit" value="Add Student">
+    </form>
+
+    <h2>View All Students</h2>
+    <form action="listStudents" method="get">
+        <input type="submit" value="View Students">
+    </form>
+
+    <h2>Update Student</h2>
+    <form action="updateStudent" method="post">
+        ID: <input type="number" name="id" required><br>
+        New Name: <input type="text" name="name"><br>
+        New Email: <input type="email" name="email"><br>
+        New Course: <input type="text" name="course"><br>
+        New Country: <input type="text" name="country"><br>
+        <input type="submit" value="Update Student">
+    </form>
+
+    <h2>Delete Student</h2>
+    <form action="deleteStudent" method="post">
+        ID: <input type="number" name="id" required><br>
+        <input type="submit" value="Delete Student">
+    </form>
+    <script>
+        addForm = document.getElementById("addForm");
+        inp1Add = document.getElementById("inp1Add");
+        inp2Add = document.getElementById("inp2Add");
+        inp3Add = document.getElementById("inp3Add");
+        inp4Add = document.getElementById("inp4Add");
+        
+        addForm.addEventListener("submit",()=>{
+            
+            inp1Add.value = "";
+            inp2Add.value = "";
+            inp3Add.value = "";
+            inp4Add.value = "";
+
+        });
+    </script>
+</body>
+</html>
